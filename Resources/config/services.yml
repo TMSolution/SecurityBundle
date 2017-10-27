@@ -1,0 +1,8 @@
+services:
+
+    tm_solution_security.voter:
+        class: TMSolution\SecurityBundle\Util\Voter
+        arguments: ['@security.access.decision_manager']
+        tags:
+            - { name: security.voter }
+        public: false
